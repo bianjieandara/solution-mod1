@@ -8,6 +8,10 @@ function LunchCheckController ($scope) {
 $scope.dishes= "";
 $scope.message= "";
 $scope.check= function (event) {
+if($scope.dishes==""||$scope.dishes==" "){
+$scope.message= "Please enter data first";
+}
+else{
 var array=$scope.dishes.split(',');
 var i = 0;
 array.forEach( function(valor, indice) { 
@@ -21,6 +25,8 @@ $scope.message= "Enjoy!";
 else{
 $scope.message= "Too much!";	
 }
+}
+
 }
 }
 
